@@ -13,10 +13,17 @@ export class LanguageService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getProductList(): Observable<Language[]> {
+  getLanguageList(): Observable<Language[]> {
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
       map(response => response._embedded.languages)
     )
+  }
+
+  /**
+   * This is a stub for now. Should return the preferred locale and language for the user.
+   */
+  getUserLanguage(): Language {
+    return new Language();
   }
 
 }

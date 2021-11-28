@@ -18,7 +18,7 @@ export class LanguageListComponent implements OnInit {
   }
 
   getLanguageList() {
-    this.languageService.getProductList().subscribe(
+    this.languageService.getLanguageList().subscribe(
       data => {
         this.languages = data;
       }
