@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
 
   products?: Product[];
   currentCategoryId?: number;
+  currentCategoryName?: string;
 
   // Inject ProductService and ActivatedRoute into ProductListComponent
   constructor(private productService: ProductService,
@@ -25,15 +26,19 @@ export class ProductListComponent implements OnInit {
 
   listProducts() {
     
-    // check if "id" parameter is available
+    // check if categoryId is chosen
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
+
 
     if (hasCategoryId) {
       // get the "id" param string. Convert string to a number.
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
+      // get the "name" param string
+      this.currentCategoryName = this.route.snapshot.paramMap.get('name')!;
     } else {
       // not category id is available ... default to category id 1
       this.currentCategoryId = 1;
+      this.currentCategoryName = 'Books';
     }
 
     // Method is invoked once you "subscribe".

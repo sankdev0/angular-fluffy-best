@@ -9,10 +9,11 @@ import { LanguageListComponent } from './components/language-list/language-list.
 import { LanguageService } from './services/language.service';
 
 import { Routes, RouterModule} from '@angular/router';
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 
 // The Order of routes is important
 const routes: Routes = [
-  {path: 'category/:id', component: ProductListComponent},
+  {path: 'category/:id/:name', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -23,7 +24,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    LanguageListComponent
+    LanguageListComponent,
+    ProductCategoryMenuComponent
   ],
   imports: [
     // Configure the router in the application module
