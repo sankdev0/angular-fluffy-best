@@ -9,10 +9,17 @@ import { LanguageListComponent } from './components/language-list/language-list.
 import { LanguageService } from './services/language.service';
 
 import { Routes, RouterModule} from '@angular/router';
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
+import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // The Order of routes is important
+// Pairs of routes and their handlers, THESE CAN BE REUSED
 const routes: Routes = [
-  {path: 'category/:id', component: ProductListComponent},
+  {path: 'products/:id', component: ProductDetailsComponent},
+  {path: 'search/:keyword', component: ProductListComponent},
+  {path: 'category/:id/:name', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -23,13 +30,17 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    LanguageListComponent
+    LanguageListComponent,
+    ProductCategoryMenuComponent,
+    SearchComponent,
+    ProductDetailsComponent
   ],
   imports: [
     // Configure the router in the application module
     RouterModule.forRoot(routes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     ProductService,
