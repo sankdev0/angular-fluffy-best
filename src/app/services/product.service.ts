@@ -45,6 +45,14 @@ export class ProductService {
       map(response => response._embedded.productCategory)
     )
   }
+
+  getProduct(theProductId: string): Observable<Product> {
+    // Build URL based on product id
+    const productUrl = `${this.baseUrl}/${theProductId}`;
+    
+    // Call REST API
+    return this.httpClient.get<Product>(productUrl);
+  }
 }
 
 /**

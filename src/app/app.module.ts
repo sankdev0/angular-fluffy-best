@@ -11,10 +11,12 @@ import { LanguageService } from './services/language.service';
 import { Routes, RouterModule} from '@angular/router';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 // The Order of routes is important
 // Pairs of routes and their handlers, THESE CAN BE REUSED
 const routes: Routes = [
+  {path: 'products/:id', component: ProductDetailsComponent},
   {path: 'search/:keyword', component: ProductListComponent},
   {path: 'category/:id/:name', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
@@ -29,7 +31,8 @@ const routes: Routes = [
     ProductListComponent,
     LanguageListComponent,
     ProductCategoryMenuComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDetailsComponent
   ],
   imports: [
     // Configure the router in the application module
