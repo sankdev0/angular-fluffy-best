@@ -9,18 +9,22 @@
                 <div *ngFor="let tempProduct of products" class="col-md-3">
 
                     <div class="product-box">
+
                         <a routerLink="/products/{{ tempProduct.id }}">
                             <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
                         </a>
+
                         <a routerLink="/products/{{ tempProduct.id }}">
                             <h1>{{ tempProduct.name }}</h1>
                         </a>
+
                         <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
                         <a href="#" class="primary-btn">Add to cart</a>
                     </div>
+
                 </div>
 
-                <!-- If products empty then display a message -->
+                <!-- if products empty then display a message-->
                 <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
                     No products found.
                 </div>
@@ -30,7 +34,7 @@
             <!-- begin footer -->
             <div class="footer-pagination">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6"></div>
 
                         <div class="col-md-6">
                             <div class="row">
@@ -40,13 +44,13 @@
                                     [pageSize]="thePageSize"
                                     [collectionSize]="theTotalElements"
                                     (pageChange)="listProducts()">
+
                                     </ngb-pagination>
 
                                 </div>
                             </div>
                         </div>
 
-                    </div>
                 </div>
             </div>
             <!-- end footer -->
@@ -54,3 +58,9 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
