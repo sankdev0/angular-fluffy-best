@@ -1,6 +1,6 @@
 <div class="main-content">
     <div class="section-content section-content-p30">
-        <h4> Category: {{ currentCategoryName }}</h4>
+        <h4><ng-container i18n="Category label|Category label@@categoryLabel">Category</ng-container>: {{ currentCategoryName }}</h4>
         <hr>
         <div class="container-fluid">
             <div class="row">
@@ -19,7 +19,8 @@
                         </a>
 
                         <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
-                        <button (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">Add to cart</button>
+                        <button (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm"
+                            i18n="Add to cart button|Add to cart button@@addToCartButton">Add to cart</button>
                     </div>
 
                 </div>
@@ -36,34 +37,31 @@
                 <div class="row">
                     <div class="col-md-6"></div>
 
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-9" style="padding-left: 30%">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-9" style="padding-left: 30%">
 
-                                    <ngb-pagination [(page)]="thePageNumber"
-                                    [pageSize]="thePageSize"
-                                    [collectionSize]="theTotalElements"
-                                    [maxSize]="5"
-                                    [boundaryLinks]="true"
+                                <ngb-pagination [(page)]="thePageNumber" [pageSize]="thePageSize"
+                                    [collectionSize]="theTotalElements" [maxSize]="5" [boundaryLinks]="true"
                                     (pageChange)="listProducts()">
 
-                                    </ngb-pagination>
+                                </ngb-pagination>
 
-                                </div>
+                            </div>
 
-                                <div class="col-md-3 mt-2" style="text-align: right;">
-                                    <span class="mr-2">Page Size</span>
-                                    <select (change)="updatePageSize($any($event.target).value)">
-                                        <option>2</option>
-                                        <option selected="true">5</option>
-                                        <option>10</option>
-                                        <option>20</option>
-                                        <option>50</option>
-                                    </select>
+                            <div class="col-md-3 mt-2" style="text-align: right;">
+                                <span class="mr-2">Page Size</span>
+                                <select (change)="updatePageSize($any($event.target).value)">
+                                    <option>2</option>
+                                    <option selected="true">5</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                </select>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
 
                 </div>
             </div>
@@ -72,9 +70,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-

@@ -13,6 +13,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": "src/locale/messages.ru.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -34,6 +40,11 @@
             "scripts": []
           },
           "configurations": {
+            "ru": {
+              "localize": ["ru"],
+              "outputPath": "dist/under-construction-ru/",
+              "i18nMissingTranslation": "warning"
+            },
             "production": {
               "budgets": [
                 {
@@ -69,6 +80,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "ru": {
+              "browserTarget": "angular-fluffy-best:build:ru"
+            },
             "production": {
               "browserTarget": "angular-fluffy-best:build:production"
             },
