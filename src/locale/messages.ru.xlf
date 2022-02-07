@@ -1,66 +1,164 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
   <file id="ngi18n" original="ng.template">
-    <unit id="aboutUsLabel">
+    <unit id="5736481176444461852">
       <notes>
         <note category="location">src/app/app.component.html:43</note>
-        <note category="description">About Us label</note>
-        <note category="meaning">About Us</note>
       </notes>
       <segment>
         <source>About Us</source>
-        <target>Подробнее о нас</target>
+        <target>Помощь</target>
       </segment>
     </unit>
-    <unit id="contactUsLabel">
+    <unit id="759687838251957893">
       <notes>
         <note category="location">src/app/app.component.html:44</note>
-        <note category="description">Contact Us label</note>
-        <note category="meaning">Contact Us</note>
       </notes>
       <segment>
         <source>Contact Us</source>
-        <target>Контакты</target>
+        <target>Связться с Нами</target>
       </segment>
     </unit>
-    <unit id="helpLabel">
+    <unit id="7911416166208830577">
       <notes>
         <note category="location">src/app/app.component.html:45</note>
-        <note category="description">Help label</note>
-        <note category="meaning">Help</note>
       </notes>
       <segment>
         <source>Help</source>
         <target>Помощь</target>
       </segment>
     </unit>
-    <unit id="categoryLabel">
+    <unit id="3012906865384504293">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:9</note>
+      </notes>
+      <segment>
+        <source>Image</source>
+        <target>Изображение</target>
+      </segment>
+    </unit>
+    <unit id="5612709566632732179">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:10</note>
+      </notes>
+      <segment>
+        <source>Detail</source>
+        <target>Подробности</target>
+      </segment>
+    </unit>
+    <unit id="6762504134540024018">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:23</note>
+      </notes>
+      <segment>
+        <source>Quantity</source>
+        <target>Количество</target>
+      </segment>
+    </unit>
+    <unit id="4814285799071780083">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:50</note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Удалить</target>
+      </segment>
+    </unit>
+    <unit id="870418232806327600">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:56</note>
+      </notes>
+      <segment>
+        <source>Subtotal</source>
+        <target>Предварительный итог</target>
+      </segment>
+    </unit>
+    <unit id="5917077768905088147">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:64</note>
+      </notes>
+      <segment>
+        <source>Total Quantity</source>
+        <target>Общее количество</target>
+      </segment>
+    </unit>
+    <unit id="5972351850683239127">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:65</note>
+      </notes>
+      <segment>
+        <source>Shipping</source>
+        <target>Доставка</target>
+      </segment>
+    </unit>
+    <unit id="7219835129384738471">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:66</note>
+      </notes>
+      <segment>
+        <source>Total Price</source>
+        <target>Общая стоимость</target>
+      </segment>
+    </unit>
+    <unit id="3662995471555881527">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:75</note>
+      </notes>
+      <segment>
+        <source>Your shopping cart is empty.</source>
+        <target>В Вашей корзине ничего нет.</target>
+      </segment>
+    </unit>
+    <unit id="8890553633144307762">
+      <notes>
+        <note category="location">src/app/components/cart-details/cart-details.component.html:78</note>
+        <note category="location">src/app/components/product-details/product-details.component.html:14,15</note>
+      </notes>
+      <segment>
+        <source>Back</source>
+        <target>Назад</target>
+      </segment>
+    </unit>
+    <unit id="1806667489382256324">
       <notes>
         <note category="location">src/app/components/product-list/product-list-grid.component.html:3</note>
-        <note category="description">Category label</note>
-        <note category="meaning">Category label</note>
       </notes>
       <segment>
         <source>Category</source>
         <target>Категория</target>
       </segment>
     </unit>
-    <unit id="addToCartButton">
+    <unit id="5871412787804796799">
       <notes>
         <note category="location">src/app/components/product-list/product-list-grid.component.html:23</note>
-        <note category="description">Add to cart button</note>
-        <note category="meaning">Add to cart button</note>
+        <note category="location">src/app/components/product-details/product-details.component.html:8,9</note>
       </notes>
       <segment>
         <source>Add to cart</source>
         <target>Добавить в корзину</target>
       </segment>
     </unit>
-    <unit id="searchLabel">
+    <unit id="5897444855657144400">
       <notes>
-        <note category="location">src/app/components/search/search.component.html:6,8</note>
-        <note category="description">Search label</note>
-        <note category="meaning">search label</note>
+        <note category="location">src/app/components/product-list/product-list-grid.component.html:30</note>
+      </notes>
+      <segment>
+        <source>Nothing is found.</source>
+        <target>Ничего не найдено.</target>
+      </segment>
+    </unit>
+    <unit id="4962189428866912350">
+      <notes>
+        <note category="location">src/app/components/product-list/product-list-grid.component.html:53</note>
+      </notes>
+      <segment>
+        <source>Page Size</source>
+        <target>Элементов на странице</target>
+      </segment>
+    </unit>
+    <unit id="4580988005648117665">
+      <notes>
+        <note category="location">src/app/components/search/search.component.html:6</note>
       </notes>
       <segment>
         <source>Search</source>
@@ -73,6 +171,7 @@
       </notes>
       <segment>
         <source>Close</source>
+        <target>Закрыть</target>
       </segment>
     </unit>
     <unit id="ngb.carousel.slide-number">
@@ -328,6 +427,15 @@
       </notes>
       <segment>
         <source>Close</source>
+      </segment>
+    </unit>
+    <unit id="4902817035128594900">
+      <notes>
+        <note category="location">src/app/components/product-details/product-details.component.html:11,12</note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Описание</target>
       </segment>
     </unit>
   </file>

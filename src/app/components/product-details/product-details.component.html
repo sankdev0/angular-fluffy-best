@@ -4,13 +4,13 @@
         <img src="{{ product.imageUrl }}" class="detail-img">
 
         <h3>{{ product.name }}</h3>
-        <div class="price">{{ product.unitPrice | currency: 'USD' }}</div>
-        <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to cart</button>
+        <div class="price">{{ product.unitPrice | currency }}</div>
+        <button (click)="addToCart()" class="btn btn-primary btn-sm" i18n>Add to cart</button>
 
         <hr>
-        <h4>Description</h4>
+        <h4 i18n>Description</h4>
         <p>{{ product.description }}</p>
 
-        <a routerLink="/products" class="mt-5">Back to Product List</a>
+        <a routerLink="/products" class="mt-5" i18n>Back</a>
     </div>
 </div>

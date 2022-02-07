@@ -6,8 +6,8 @@
 
                 <table class="table table-bordered">
                     <tr>
-                        <th width="20%">Product Image</th>
-                        <th width="50%">Product Detail</th>
+                        <th width="20%" i18n>Image</th>
+                        <th width="50%" i18n>Detail</th>
                         <th width="30%"></th>
                     </tr>
                     <tr *ngFor="let tempCartItem of cartItems">
@@ -16,11 +16,11 @@
                         </td>
                         <td>
                             <p> {{ tempCartItem.name }}</p>
-                            <p> {{ tempCartItem.unitPrice | currency: 'USD' }}</p>
+                            <p> {{ tempCartItem.unitPrice | currency }}</p>
                         </td>
                         <td>
                             <div class="items">
-                                <label>Quantity:</label>
+                                <label><span i18n>Quantity</span>:</label>
 
                                 <div class="row no-gutters">
                                     <div class="col">
@@ -47,13 +47,13 @@
                                 <div class="row no-gutters mt-2">
                                     <div class="col">
                                         <button (click)="remove(tempCartItem)"
-                                            class="btn btn-primary btn-sm">Remove</button>
+                                            class="btn btn-primary btn-sm" i18n>Remove</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <p class="mt-2">Subtotal: {{ tempCartItem.quantity * tempCartItem.unitPrice | currency:
-                                'USD' }}
+                            <p class="mt-2">
+                                <span i18n>Subtotal</span>: {{ tempCartItem.quantity * tempCartItem.unitPrice | currency }}
                             </p>
                         </td>
                     </tr>
@@ -61,9 +61,9 @@
                     <tr>
                         <td colspan="2"></td>
                         <td style="font-weight:bold">
-                            <p>Total Quantity: {{ totalQuantity }}</p>
-                            <p>Shipping: FREE</p>
-                            <p>Total Price: {{ totalPrice | currency: 'USD' }}</p>
+                            <p><span i18n>Total Quantity</span>: {{ totalQuantity }}</p>
+                            <p><span i18n>Shipping</span>: FREE</p>
+                            <p><span i18n>Total Price</span>: {{ totalPrice | currency }}</p>
                         </td>
                     </tr>
                 </table>
@@ -72,10 +72,10 @@
 
             <!-- if cart is empty then display a message -->
             <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
-                Your shopping cart is empty.
+                <span i18n>Your shopping cart is empty.</span>
             </div>
 
-            <a routerLink="/products" class="mt-5">Back to Product List</a>
+            <a routerLink="/products" class="mt-5" i18n>Back</a>
         </div>
     </div>
 </div>
